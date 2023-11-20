@@ -1,5 +1,6 @@
 package org.example.repo;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
@@ -46,5 +47,18 @@ public class Main {
 
 
         System.out.println("Difference in days between the two dates: " + daysDifference);
+
+        // Create an instance of the Animal class
+        Animal myAnimal = new Animal(LocalDate.of(2023, 11, 19), "Bibbi ");
+
+        System.out.println("My animal name: " + myAnimal.getName());
+        System.out.println("His Birthday: " + myAnimal.getBirthday());
+
+        // Print on the command line how many days are left
+        // until the next birthday of the animal.
+
+        System.out.println("Days until " + myAnimal.getName() + "next birthday: " + myAnimal.daysUntilNextBirthday() + " days");
+
+
     }
 }
